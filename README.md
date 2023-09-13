@@ -4,11 +4,8 @@ O  objetivo de facilitar a conexão dos pais com as cantinas das escolas, propor
 Grupo:
 
 Ricardo Cezar;
-
 Felipe Gabriel;
-
 Matheus Salvador;
-
 Gabriel Albuquerque;
 
 
