@@ -14,8 +14,8 @@ Gabriel Albuquerque;
 
 
 Documentação do projeto se encontra: 
-
-        (Requisistos do projeto )
-
 https://www.figma.com/file/IP5J8baU4Uh81A6fvaXuNq/Mobile_App_Design-(Community)?type=design&node-id=0%3A1&mode=design&t=leOB4mGsyxxwbGUW-1  (Protótipo Mobile) Versão web em desenvolvimento.
+
+
+https://docs.google.com/document/d/1Rrm9cp516cvWyYDUTCOpJKbzC82MYfRPrCLMS_ZnrqI/edit?usp=sharing (Docentação de requisitos).
 
