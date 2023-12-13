@@ -1,15 +1,20 @@
 {
-  "name": "bem_easy_project",
-  "version": "1.0.0",
-  "description": "O  objetivo de facilitar a conexão dos pais com as cantinas das escolas, proporcionando o acesso e o total controle da alimentação dos alunos por meio de um aplicativo.",
-  "main": "index.js",
+  "name": "node-ads",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mssql": "^10.0.1",
+    "mysql2": "^3.6.2",
+    "oracledb": "^6.2.0",
+    "pg": "^8.11.3"
   }
 }

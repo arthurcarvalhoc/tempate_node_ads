@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    FICR LAB
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+
+  <script>
+
+    function showModal(){
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })
+    }
+
+  </script>
+
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+  
+  <%- include('./layout/sidemenu') %>
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <%- include('./layout/header') %>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+
+   
+
+
+              
+
+
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Laboratorios</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2" style="height: 450px;">
+              
+              <div class="table-responsive p-0">
+                <div class="row">
+                  <div class="col-12">
+
+                  </div>
+
+                </div>
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Capacidade</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Computadores</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Açoes</th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+
+
+                <% if(locals.laboratorios){ 
+                  laboratorios.map(function(lab, i){
+                  %>
+
+                    <tr>
+                      <td class="align-middle text-center">
+                        <div class="d-flex px-2 py-1">
+                          <div class="align-middle text-center">
+                            
+                              <%= lab.nome %> 
+                              
+
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <%= lab.capacidade %>  
+                        </td>
+                      <td class="align-middle text-center text-sm">
+                        <%= lab.computadores %>  
+                        </td>
+                      <td class="align-middle text-center">
+                        <a href="/viewLab?id=<%= lab.id %>">
+                          <i class="material-icons me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Detalhar">search</i></a>
+                        </a>
+                        <a href="/updatelab?id=<%= lab.id %>">
+                          <i class="material-icons me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">edit</i>
+                        </a>
+                        <a href="/deletelab?id=<%= lab.id %>">
+                          <i class="material-icons me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Excluir">delete</i></a>
+                        </a>
+                       
+                        </td>
+                    </tr>
+
+                    <% });
+              } %>
+
+
+                </tbody>
+              </table>
+
+              <div class="position-absolute bottom-0 end-0 rounded-circle m-5">
+                <button type="button" class="btn btn-primary btn-lg  hide-toggle circle" aria-expanded="false" aria-haspopup="true"
+                 style="height: 62px;   width: 62px;   border-radius: 30px;"
+                 onclick="window.location = '/addlaboratorio'" >
+                  <strong>
+                    <span style="font-size: large; font-weight: bolder;">
+                      +
+                      </span>
+                    
+                    </strong>
+                  <span class="visually-hidden">Add Category</span>
+                </button>
+                
+              </div>
+            </div>
+          </div>
+
+ 
+              
+            
+            
+   
+    <%- include('./layout/footer') %>
+      
+      
+    <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
